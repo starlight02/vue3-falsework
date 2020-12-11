@@ -39,7 +39,7 @@ export default {
     align-items: center;
 
     .bottom-menu {
-        width: 60px;
+        width: 70px;
         height: 44px;
         border-radius: 4px;
         color: #969696;
@@ -47,7 +47,7 @@ export default {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        font-size: 12px;
+        font-size: 14px;
         text-decoration: none;
     }
 

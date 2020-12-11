@@ -2,8 +2,13 @@
     <section class="market">
         <div class="header">
             <img src="../assets/banner.jpg" alt="banner">
+            <ul class="option-wrapper">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         </div>
-
     </section>
 </template>
 
@@ -27,6 +32,20 @@ export default {
             margin-bottom: 24px;
             border-radius: 4px;
             overflow: hidden;
+        }
+
+        .option-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            
+            > li {
+                display: flex;
+                width: 90px;
+                height: 65px;
+                border-radius: 4px;
+                box-shadow: 0 0 1em 1px #969696;
+            }
         }
     }
 }
