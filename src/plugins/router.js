@@ -7,6 +7,8 @@ const Market = () => import('../views/Market.vue');
 const User = () => import('../views/User.vue');
 const Design = () => import('../views/Design.vue');
 const Furniture = () => import('../views/Furniture.vue');
+const More = () => import('../views/More.vue');
+const ProductDetail = () => import('../views/ProductDetail.vue');
 
 export default createRouter({
     history: routerHistory,
@@ -35,6 +37,16 @@ export default createRouter({
             name: 'Furniture',
             path: '/furniture',
             component: Furniture,
+        },
+        {
+            name: 'More',
+            path: '/more',
+            component: More,
+        }, 
+        {
+            name: 'ProductDetail',
+            path: '/product/:id',
+            component: ProductDetail,
         },
     
     ],

@@ -11,7 +11,10 @@ export default {
     components: {
         AppBottomBar,
     },
-}
+    setup() {
+        console.log(`vite app 运行在 ${import.meta.env.MODE} 模式`);
+    },
+};
 </script>
 
 <style lang="scss">
