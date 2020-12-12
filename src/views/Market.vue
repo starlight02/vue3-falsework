@@ -2,7 +2,9 @@
     <section class="market">
         <!-- 头部 -->
         <div class="header">
+            <!--  Banner  -->
             <img src="../assets/banner.jpg" alt="banner">
+            <!-- 选项卡 -->
             <ul class="option-wrapper">
                 <li v-for="(option,i) in optionList" :key="i" :class="{'current-option':option.active}" @click="optionClick(option)">
                     <i class="mdi mdi-24px" :class="option.icon"></i>
@@ -10,9 +12,8 @@
                 </li>
             </ul>
         </div>
-        <!--        -->
         <div class="list-wrapper">
-            <!--            -->
+            <!-- 列表标题 -->
             <div class="title-wrapper">
                 <h1>
                     {{ title }}
@@ -24,9 +25,11 @@
                     <i class="mdi mdi-24px mdi-chevron-right"></i>
                 </router-link>
             </div>
+            <!-- 产品分类选项卡 -->
             <ul class="product-type-wrapper">
                 <li v-for="(type,i) in productTypeList" :key="i" :class="{'active-type':type.active}" @click="productTypeClick(type)">{{ type.name }}</li>
             </ul>
+            <!-- 产品列表 -->
             <div class="product-list-wrapper">
                 <template v-for="(p,i) in productList" :key="i">
                     <Product
@@ -42,6 +45,12 @@
                     <hr/>
                 </template>
             </div>
+            <!-- 按钮 -->
+            <button class="application" @click="apply">我是师傅，申请入驻</button>
+            <!-- 卡片 -->
+            <div class="company-card">
+
+            </div>
         </div>
     </section>
 </template>
@@ -49,8 +58,6 @@
 <script>
 import {reactive, ref, toRef, toRefs} from 'vue';
 import Product from '../components/Product.vue';
-
-// import.meta.env.
 
 import image1 from '../assets/product_img1.gif';
 import image2 from '../assets/product_img2.gif';
@@ -114,6 +121,10 @@ export default {
             // TODO
         };
 
+        const apply = () => {
+            window.confirm('点击了');
+        };
+
         //产品类型点击事件
         const productTypeClick = (type) => {
             productTypeList.value.forEach(t => t.active = false);
@@ -135,6 +146,7 @@ export default {
             productList,
             optionClick,
             productTypeClick,
+            apply,
         };
     },
 };
@@ -247,7 +259,7 @@ export default {
 
         .product-list-wrapper {
             width: 100%;
-            padding: 0 24px;
+            padding: 0 24px 24px;
 
             > hr {
                 width: 100%;
@@ -257,6 +269,31 @@ export default {
                 outline: none;
                 background-color: #eeeeee;
             }
+        }
+
+        .application {
+            width: 365px;
+            height: 65px;
+            margin: 0 auto;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            border-radius: 65px;
+            box-shadow: 0 2px 10px 0px rgba(52, 180, 155, 0.5);
+            background-color: #34b597;
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: normal;
+        }
+
+        .company-card {
+            width: 427px;
+            height: 100px;
+            margin: 48px 24px 0 24px;
+            border-radius: 4px;
+            box-shadow: 0 0 10px -3px rgba(40, 39, 39, 0.3);
         }
     }
 }
