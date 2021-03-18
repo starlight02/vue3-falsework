@@ -2,52 +2,27 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 const routerHistory = createWebHistory();
 
-const Home = () => import('../views/Home.vue');
-const Market = () => import('../views/Market.vue');
-const User = () => import('../views/User.vue');
-const Design = () => import('../views/Design.vue');
-const Furniture = () => import('../views/Furniture.vue');
-const More = () => import('../views/More.vue');
-const ProductDetail = () => import('../views/ProductDetail.vue');
+let routeList = [];
+const modules = import.meta.globEager('../modules/*/routes.js');
 
-export default createRouter({
-    history: routerHistory,
-    routes: [
-        {
-            name: 'Home',
-            path: '/',
-            component: Home,
-        },
-        {
-            name: 'Market',
-            path: '/market',
-            component: Market,
-        },
-        {
-            name: 'User',
-            path: '/user',
-            component: User,
-        },
-        {
-            name: 'Design',
-            path: '/design',
-            component: Design,
-        },
-        {
-            name: 'Furniture',
-            path: '/furniture',
-            component: Furniture,
-        },
-        {
-            name: 'More',
-            path: '/more',
-            component: More,
-        }, 
-        {
-            name: 'ProductDetail',
-            path: '/product/:id',
-            component: ProductDetail,
-        },
-    
-    ],
+Object.keys(modules).forEach(r => {
+    const { default: routes } = modules[r];
+    routeList = routeList.concat(routes);
 });
+routeList.push({ path: '/', redirect: { name: 'home' } });
+
+const router = createRouter({
+    history: routerHistory,
+    routes: routeList
+});
+
+router.beforeEach((to, from, next) => {
+    window.np.start();
+    next();
+});
+
+router.afterEach(() => {
+    window.np.done();
+});
+
+export default router;

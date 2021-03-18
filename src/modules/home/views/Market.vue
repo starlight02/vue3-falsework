@@ -57,11 +57,11 @@
 
 <script>
 import {reactive, ref, toRef, toRefs} from 'vue';
-import Product from '../components/Product.vue';
+import Product from '../../../components/Product.vue';
 
-import image1 from '../assets/product_img1.gif';
-import image2 from '../assets/product_img2.gif';
-import image3 from '../assets/product_img3.jpg';
+import image1 from '../../../assets/product_img1.gif';
+import image2 from '../../../assets/product_img2.gif';
+import image3 from '../../../assets/product_img3.jpg';
 
 export default {
     name: 'Market',
