@@ -5,7 +5,7 @@ import legacy from '@vitejs/plugin-legacy';
 export default defineConfig({
     base: './',
     build: {
-        sourcemap: process.env.NODE_ENV === 'development'
+        sourcemap: process.env.NODE_ENV !== 'production'
     },
     // mode:,
     plugins: [
