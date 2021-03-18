@@ -1,11 +1,10 @@
 <template>
     <h1>这是首页</h1>
+    <HelloWorld />
 </template>
 
-<script>
-export default {
-  name: 'Home',
-}
+<script setup>
+import HelloWorld from '../components/HelloWorld.vue'
 </script>
 
 <style lang="scss" scoped>
