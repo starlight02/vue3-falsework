@@ -6,7 +6,8 @@
     "start:test": "vite --mode test",
     "serve": "vite preview",
     "build": "vite build",
-    "build:test": "vite build --mode test"
+    "build:test": "vite build --mode test",
+    "module": "node script/new-module.js"
   },
   "dependencies": {
     "@mdi/font": "^5.8.55",
