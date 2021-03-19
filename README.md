@@ -14,7 +14,7 @@ yarn build
 
 ### 打包后本地预览
 ```bash
-yarn sever
+yarn serve
 ```
 
 ## 如何开发
