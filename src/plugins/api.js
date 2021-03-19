@@ -3,7 +3,7 @@ import Axios from 'axios';
 const CancelToken = Axios.CancelToken;
 
 export const axios = Axios.create({
-    // baseURL: process.env.VUE_APP_API_BASIC_URL,
+    baseURL: import.meta.env.VITE_API_BASE_URL,
     responseType: 'json',
     // withCredentials: true,
     headers: {
