@@ -36,13 +36,13 @@ let apisConfig = {};
 const apis = {};
 
 const modules = import.meta.globEager('../modules/*/apis.js');
-console.log(modules);
+// console.log(modules);
 
 Object.keys(modules).forEach(key => {
     const { default: api } = modules[key];
     apisConfig = {...apisConfig,...api};
 });
-console.log(apisConfig);
+// console.log(apisConfig);
 
 Object.keys(apisConfig).forEach(key => {
     const config = apisConfig[key];
