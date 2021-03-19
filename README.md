@@ -2,6 +2,7 @@
 一个基于 vite2 生成的 vue3.0 模板项目，无 TypeScript，非 PWA。
 
 ## 快速开始
+*确保 Node 版本 => 12*
 ```bash
 yarn && yarn start
 ```
@@ -11,9 +12,9 @@ yarn && yarn start
 yarn build
 ```
 
-### 检查并修复文件
+### 打包后本地预览
 ```bash
-yarn lint
+yarn sever
 ```
 
 ## 如何开发
