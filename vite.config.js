@@ -8,7 +8,7 @@ import htmlPlugin from 'vite-plugin-html';
 export default defineConfig({
     base: './',
     build: {
-        sourcemap: process.env.NODE_ENV !== 'production'
+        sourcemap: process.env.NODE_ENV !== 'production',
     },
     // mode:,
     plugins: [
@@ -19,30 +19,32 @@ export default defineConfig({
             ],
             corejs: true,
         }),
-        htmlPlugin({
-            inject: {
-                injectData: {
-                    TITLE: 'Vue3 APP',
+        htmlPlugin(
+            {
+                inject: {
+                    injectData: {
+                        TITLE: 'Vue3 APP',
+                    },
+                    // tags 里的配置会插入到 head 中
+                    tags: [
+                        {
+                            tag: 'meta',
+                            attrs: {
+                                name: 'keywords',
+                                content: '关键字,关键字',
+                            },
+                        },
+                        {
+                            tag: 'meta',
+                            attrs: {
+                                name: 'description',
+                                content: '这是网站描述描述描述描述',
+                            },
+                        },
+                    ],
                 },
-                tags:[
-                    {
-                        tag: "meta",
-                        attrs: {
-                            name: 'keywords',
-                            content: '关键字,关键字'
-                        }
-                    },
-                    {
-                        tag: "meta",
-                        attrs: {
-                            name: 'description',
-                            content: '这是网站描述描述描述描述'
-                        }
-                    },
-                ]
+                minify: true,
             },
-            minify : true,
-            }
-        )
+        ),
     ],
 });
