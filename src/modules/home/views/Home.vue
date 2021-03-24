@@ -4,5 +4,10 @@
 </template>
 
 <script setup>
-import HelloWorld from '../../../components/HelloWorld.vue'
+import HelloWorld from "../../../components/HelloWorld.vue";
+
+import { useRoute, useRouter } from "vue-router";
+const route = useRoute();
+
+console.log(route.name);
 </script>

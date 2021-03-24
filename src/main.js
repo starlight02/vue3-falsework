@@ -7,10 +7,8 @@ import 'nprogress/nprogress.css';
 import './styles/reset.css';
 import '@mdi/font/css/materialdesignicons.css';
 
-console.log( import.meta.env);
-
 window.appVersion = import.meta.env.VITE_APP_VERSION;
 window.api = api;
 window.np = np;
 
-const app = createApp(App).use(router).mount('#app');
+export const app = createApp(App).use(router).mount('#app');

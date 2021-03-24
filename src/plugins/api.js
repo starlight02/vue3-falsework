@@ -25,7 +25,7 @@ axios.interceptors.request.use(config => {
 });
 
 //全局响应拦截器
-axios.interceptors.response.use(response =>{
+axios.interceptors.response.use(response => {
     console.log(response);
     return response.data;
 }, error => {
@@ -40,7 +40,7 @@ const modules = import.meta.globEager('../modules/*/apis.js');
 
 Object.keys(modules).forEach(key => {
     const { default: api } = modules[key];
-    apisConfig = {...apisConfig,...api};
+    apisConfig = { ...apisConfig, ...api };
 });
 // console.log(apisConfig);
 
@@ -60,9 +60,9 @@ Object.keys(apisConfig).forEach(key => {
                     if (!restful || Object.prototype.toString.call(restful) !== '[object Object]' || !Object.keys(restful).includes(str)) {
                         let cancel;
                         config.cancelToken = new CancelToken(c => cancel = c);
-                        cancel(`${ key } 请求中 ${ str } 参数未注入`);
+                        cancel(`${key} 请求中 ${str} 参数未注入`);
                     } else {
-                        config.url = config.url.replace(`{${ str }}`, restful[str]);
+                        config.url = config.url.replace(`{${str}}`, restful[str]);
                     }
                 });
                 config.transform = true;
