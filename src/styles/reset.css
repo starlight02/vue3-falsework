@@ -37,6 +37,7 @@ input, textarea, button, a, select {
 html{
 	width: 100%;
 	height: 100%;
+    touch-action: manipulation;
 }
 
 body {
@@ -47,7 +48,7 @@ body {
 }
 
 body, html, button, input, select, textarea {
-    font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Hiragino Sans", Arial, sans-serif;
+    font-family: "PingFang SC","Source Han Sans","Helvetica Neue", Helvetica, "Hiragino Sans", Arial, sans-serif;
 	-webkit-overflow-scrolling: touch;
 }
 
