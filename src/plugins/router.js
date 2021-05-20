@@ -2,18 +2,18 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 const routerHistory = createWebHistory();
 
-let routeList = [];
+const routes = [];
 const modules = import.meta.globEager('../modules/*/routes.js');
 
 Object.keys(modules).forEach(r => {
-    const { default: routes } = modules[r];
-    routeList = routeList.concat(routes);
+    const { default: list } = modules[r];
+    routes.push(...list);
 });
-routeList.push({ path: '/', redirect: { name: 'home' } });
+routes.push({ path: '/:pathMatch(.*)*', redirect: { name: 'Home' } });
 
 const router = createRouter({
     history: routerHistory,
-    routes: routeList
+    routes
 });
 
 router.beforeEach((to, from, next) => {

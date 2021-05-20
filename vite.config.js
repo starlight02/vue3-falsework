@@ -1,9 +1,12 @@
 require('./script/get_code_version');
 
-import {defineConfig} from 'vite';
+import { resolve } from "path";
+import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import legacy from '@vitejs/plugin-legacy';
 import htmlPlugin from 'vite-plugin-html';
+import vueI18n from '@intlify/vite-plugin-vue-i18n';
+import i18nResources from "vite-plugin-i18n-resources";
 
 export default defineConfig({
     base: './',
@@ -18,6 +21,11 @@ export default defineConfig({
                 // Empty by default
             ],
             corejs: true,
+        }),
+        vueI18n(),
+        // 此插件只能收集文件名为 {namespaces}.{locale}.json 的 JSON 文件
+        i18nResources({
+          path: resolve(__dirname, "src/modules"),
         }),
         htmlPlugin(
             {

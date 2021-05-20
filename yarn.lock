@@ -26,10 +26,125 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@mdi/font@^5.8.55":
-  version "5.9.55"
-  resolved "https://registry.npm.taobao.org/@mdi/font/download/@mdi/font-5.9.55.tgz#41acd50b88073ded7095fc3029d8712b6e12f38e"
-  integrity sha1-QazVC4gHPe1wlfwwKdhxK24S844=
+"@intlify/cli@^0.4.0":
+  version "0.4.0"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/@intlify/cli/-/cli-0.4.0.tgz#4370ddab24a295c89925f3abd447bbeda09bb0e7"
+  integrity sha1-Q3DdqySilciZJfOr1Ee77aCbsOc=
+  dependencies:
+    "@intlify/core" "^9.1.0"
+    "@intlify/core-base" "^9.1.0"
+    "@intlify/message-compiler" "^9.1.0"
+    "@intlify/shared" "^9.1.0"
+    chalk "^4.1.0"
+    debug "^4.3.1"
+    glob "^7.1.6"
+    jsonc-eslint-parser "^1.0.1"
+    source-map "^0.6.1"
+    yaml-eslint-parser "^0.3.2"
+    yargs "^16.2.0"
+
+"@intlify/core-base@9.1.6", "@intlify/core-base@^9.1.0":
+  version "9.1.6"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/@intlify/core-base/-/core-base-9.1.6.tgz#887fbeafe37d955bac50318f30ac589839f0d9fb"
+  integrity sha1-iH++r+N9lVusUDGPMKxYmDnw2fs=
+  dependencies:
+    "@intlify/devtools-if" "9.1.6"
+    "@intlify/message-compiler" "9.1.6"
+    "@intlify/message-resolver" "9.1.6"
+    "@intlify/runtime" "9.1.6"
+    "@intlify/shared" "9.1.6"
+    "@intlify/vue-devtools" "9.1.6"
+
+"@intlify/core@^9.1.0":
+  version "9.1.6"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/@intlify/core/-/core-9.1.6.tgz#02215f4f41fa2838923faf51b9d97d6ce055f0a1"
+  integrity sha1-AiFfT0H6KDiSP69Rudl9bOBV8KE=
+  dependencies:
+    "@intlify/core-base" "9.1.6"
+
+"@intlify/devtools-if@9.1.6":
+  version "9.1.6"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/@intlify/devtools-if/-/devtools-if-9.1.6.tgz#739b195e430e24fbf8f864ec8a51e243e3347385"
+  integrity sha1-c5sZXkMOJPv4+GTsilHiQ+M0c4U=
+  dependencies:
+    "@intlify/shared" "9.1.6"
+
+"@intlify/message-compiler@9.1.6", "@intlify/message-compiler@^9.1.0":
+  version "9.1.6"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/@intlify/message-compiler/-/message-compiler-9.1.6.tgz#e3e99165c1e6ecc496211017799ae59e15b05a18"
+  integrity sha1-4+mRZcHm7MSWIRAXeZrlnhWwWhg=
+  dependencies:
+    "@intlify/message-resolver" "9.1.6"
+    "@intlify/shared" "9.1.6"
+    source-map "0.6.1"
+
+"@intlify/message-resolver@9.1.6":
+  version "9.1.6"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/@intlify/message-resolver/-/message-resolver-9.1.6.tgz#d7493c9f326d5feb0cd8538a6735b648a91d8f2f"
+  integrity sha1-10k8nzJtX+sM2FOKZzW2SKkdjy8=
+
+"@intlify/runtime@9.1.6":
+  version "9.1.6"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/@intlify/runtime/-/runtime-9.1.6.tgz#bf1548d9034c80eef92b06b240cb347effb41f71"
+  integrity sha1-vxVI2QNMgO75KwayQMs0fv+0H3E=
+  dependencies:
+    "@intlify/message-compiler" "9.1.6"
+    "@intlify/message-resolver" "9.1.6"
+    "@intlify/shared" "9.1.6"
+
+"@intlify/shared@9.1.6", "@intlify/shared@^9.1.0":
+  version "9.1.6"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/@intlify/shared/-/shared-9.1.6.tgz#d03c9301898d6ddffe2a54c03e7664174fbcdfd9"
+  integrity sha1-0DyTAYmNbd/+KlTAPnZkF0+839k=
+
+"@intlify/vite-plugin-vue-i18n@^2.1.2":
+  version "2.1.2"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/@intlify/vite-plugin-vue-i18n/-/vite-plugin-vue-i18n-2.1.2.tgz#afc794952d1beb83834ffbf5a1651de019f32aee"
+  integrity sha1-r8eUlS0b64ODT/v1oWUd4BnzKu4=
+  dependencies:
+    "@intlify/cli" "^0.4.0"
+    "@intlify/shared" "^9.1.0"
+    "@rollup/pluginutils" "^4.1.0"
+    debug "^4.1.1"
+    fast-glob "^3.2.5"
+
+"@intlify/vue-devtools@9.1.6":
+  version "9.1.6"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/@intlify/vue-devtools/-/vue-devtools-9.1.6.tgz#88faadf203951a2a10107440fa99b58f4637d40d"
+  integrity sha1-iPqt8gOVGioQEHRA+pm1j0Y31A0=
+  dependencies:
+    "@intlify/message-resolver" "9.1.6"
+    "@intlify/runtime" "9.1.6"
+    "@intlify/shared" "9.1.6"
+
+"@nodelib/fs.scandir@2.1.4":
+  version "2.1.4"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/@nodelib/fs.scandir/-/fs.scandir-2.1.4.tgz#d4b3549a5db5de2683e0c1071ab4f140904bbf69"
+  integrity sha1-1LNUml213iaD4MEHGrTxQJBLv2k=
+  dependencies:
+    "@nodelib/fs.stat" "2.0.4"
+    run-parallel "^1.1.9"
+
+"@nodelib/fs.stat@2.0.4", "@nodelib/fs.stat@^2.0.2":
+  version "2.0.4"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/@nodelib/fs.stat/-/fs.stat-2.0.4.tgz#a3f2dd61bab43b8db8fa108a121cfffe4c676655"
+  integrity sha1-o/LdYbq0O424+hCKEhz//kxnZlU=
+
+"@nodelib/fs.walk@^1.2.3":
+  version "1.2.6"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/@nodelib/fs.walk/-/fs.walk-1.2.6.tgz#cce9396b30aa5afe9e3756608f5831adcb53d063"
+  integrity sha1-zOk5azCqWv6eN1Zgj1gxrctT0GM=
+  dependencies:
+    "@nodelib/fs.scandir" "2.1.4"
+    fastq "^1.6.0"
+
+"@rollup/pluginutils@^4.1.0":
+  version "4.1.0"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/@rollup/pluginutils/-/pluginutils-4.1.0.tgz#0dcc61c780e39257554feb7f77207dceca13c838"
+  integrity sha1-Dcxhx4DjkldVT+t/dyB9zsoTyDg=
+  dependencies:
+    estree-walker "^2.0.1"
+    picomatch "^2.2.2"
 
 "@vitejs/plugin-legacy@^1.3.1":
   version "1.3.2"
@@ -96,6 +211,11 @@
     "@vue/compiler-dom" "3.0.11"
     "@vue/shared" "3.0.11"
 
+"@vue/devtools-api@^6.0.0-beta.7":
+  version "6.0.0-beta.10"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/@vue/devtools-api/-/devtools-api-6.0.0-beta.10.tgz#f39da7618cee292e39c7274227c34163e30eb3ca"
+  integrity sha1-852nYYzuKS45xydCJ8NBY+MOs8o=
+
 "@vue/reactivity@3.0.11":
   version "3.0.11"
   resolved "https://registry.npm.taobao.org/@vue/reactivity/download/@vue/reactivity-3.0.11.tgz?cache=0&sync_timestamp=1617321554569&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vue%2Freactivity%2Fdownload%2F%40vue%2Freactivity-3.0.11.tgz#07b588349fd05626b17f3500cbef7d4bdb4dbd0b"
@@ -125,12 +245,34 @@
   resolved "https://registry.npm.taobao.org/@vue/shared/download/@vue/shared-3.0.11.tgz?cache=0&sync_timestamp=1617321555263&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vue%2Fshared%2Fdownload%2F%40vue%2Fshared-3.0.11.tgz#20d22dd0da7d358bb21c17f9bde8628152642c77"
   integrity sha1-INIt0Np9NYuyHBf5vehigVJkLHc=
 
+acorn-jsx@^5.3.1:
+  version "5.3.1"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/acorn-jsx/-/acorn-jsx-5.3.1.tgz#fc8661e11b7ac1539c47dbfea2e72b3af34d267b"
+  integrity sha1-/IZh4Rt6wVOcR9v+oucrOvNNJns=
+
+acorn@^7.4.0:
+  version "7.4.1"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/acorn/-/acorn-7.4.1.tgz#feaed255973d2e77555b83dbc08851a6c63520fa"
+  integrity sha1-/q7SVZc9LndVW4PbwIhRpsY1IPo=
+
+ansi-regex@^5.0.0:
+  version "5.0.0"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/ansi-regex/-/ansi-regex-5.0.0.tgz#388539f55179bf39339c81af30a654d69f87cb75"
+  integrity sha1-OIU59VF5vzkznIGvMKZU1p+Hy3U=
+
 ansi-styles@^3.2.1:
   version "3.2.1"
   resolved "https://registry.npm.taobao.org/ansi-styles/download/ansi-styles-3.2.1.tgz?cache=0&sync_timestamp=1617175602652&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fansi-styles%2Fdownload%2Fansi-styles-3.2.1.tgz#41fbb20243e50b12be0f04b8dedbf07520ce841d"
   integrity sha1-QfuyAkPlCxK+DwS43tvwdSDOhB0=
   dependencies:
     color-convert "^1.9.0"
+
+ansi-styles@^4.0.0, ansi-styles@^4.1.0:
+  version "4.3.0"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/ansi-styles/-/ansi-styles-4.3.0.tgz#edd803628ae71c04c85ae7a0906edad34b648937"
+  integrity sha1-7dgDYornHATIWuegkG7a00tkiTc=
+  dependencies:
+    color-convert "^2.0.1"
 
 anymatch@~3.1.1:
   version "3.1.2"
@@ -197,7 +339,7 @@ brace-expansion@^1.1.7:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
 
-braces@~3.0.2:
+braces@^3.0.1, braces@~3.0.2:
   version "3.0.2"
   resolved "https://registry.npm.taobao.org/braces/download/braces-3.0.2.tgz#3454e1a462ee8d599e236df336cd9ea4f8afe107"
   integrity sha1-NFThpGLujVmeI23zNs2epPiv4Qc=
@@ -242,6 +384,14 @@ chalk@^2.4.2:
     escape-string-regexp "^1.0.5"
     supports-color "^5.3.0"
 
+chalk@^4.1.0:
+  version "4.1.1"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/chalk/-/chalk-4.1.1.tgz#c80b3fab28bf6371e6863325eee67e618b77e6ad"
+  integrity sha1-yAs/qyi/Y3HmhjMl7uZ+YYt35q0=
+  dependencies:
+    ansi-styles "^4.1.0"
+    supports-color "^7.1.0"
+
 "chokidar@>=2.0.0 <4.0.0":
   version "3.5.1"
   resolved "https://registry.npm.taobao.org/chokidar/download/chokidar-3.5.1.tgz?cache=0&sync_timestamp=1610719430924&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fchokidar%2Fdownload%2Fchokidar-3.5.1.tgz#ee9ce7bbebd2b79f49f304799d5468e31e14e68a"
@@ -264,6 +414,15 @@ clean-css@^4.2.3:
   dependencies:
     source-map "~0.6.0"
 
+cliui@^7.0.2:
+  version "7.0.4"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/cliui/-/cliui-7.0.4.tgz#a0265ee655476fc807aea9df3df8df7783808b4f"
+  integrity sha1-oCZe5lVHb8gHrqnfPfjfd4OAi08=
+  dependencies:
+    string-width "^4.2.0"
+    strip-ansi "^6.0.0"
+    wrap-ansi "^7.0.0"
+
 color-convert@^1.9.0:
   version "1.9.3"
   resolved "https://registry.npm.taobao.org/color-convert/download/color-convert-1.9.3.tgz#bb71850690e1f136567de629d2d5471deda4c1e8"
@@ -271,10 +430,22 @@ color-convert@^1.9.0:
   dependencies:
     color-name "1.1.3"
 
+color-convert@^2.0.1:
+  version "2.0.1"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/color-convert/-/color-convert-2.0.1.tgz#72d3a68d598c9bdb3af2ad1e84f21d896abd4de3"
+  integrity sha1-ctOmjVmMm9s68q0ehPIdiWq9TeM=
+  dependencies:
+    color-name "~1.1.4"
+
 color-name@1.1.3:
   version "1.1.3"
   resolved "https://registry.npm.taobao.org/color-name/download/color-name-1.1.3.tgz#a7d0558bd89c42f795dd42328f740831ca53bc25"
   integrity sha1-p9BVi9icQveV3UIyj3QIMcpTvCU=
+
+color-name@~1.1.4:
+  version "1.1.4"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
+  integrity sha1-wqCah6y95pVD3m9j+jmVyCbFNqI=
 
 colorette@^1.2.1, colorette@^1.2.2:
   version "1.2.2"
@@ -318,6 +489,13 @@ csstype@^2.6.8:
   resolved "https://registry.npm.taobao.org/csstype/download/csstype-2.6.16.tgz?cache=0&sync_timestamp=1614159885468&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcsstype%2Fdownload%2Fcsstype-2.6.16.tgz#544d69f547013b85a40d15bff75db38f34fe9c39"
   integrity sha1-VE1p9UcBO4WkDRW/912zjzT+nDk=
 
+debug@^4.1.1, debug@^4.3.1:
+  version "4.3.1"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/debug/-/debug-4.3.1.tgz#f0d229c505e0c6d8c49ac553d1b13dc183f6b2ee"
+  integrity sha1-8NIpxQXgxtjEmsVT0bE9wYP2su4=
+  dependencies:
+    ms "2.1.2"
+
 dot-case@^3.0.4:
   version "3.0.4"
   resolved "https://registry.npm.taobao.org/dot-case/download/dot-case-3.0.4.tgz?cache=0&sync_timestamp=1606867327042&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdot-case%2Fdownload%2Fdot-case-3.0.4.tgz#9b2b670d00a431667a8a75ba29cd1b98809ce751"
@@ -337,6 +515,11 @@ electron-to-chromium@^1.3.649:
   version "1.3.712"
   resolved "https://registry.npm.taobao.org/electron-to-chromium/download/electron-to-chromium-1.3.712.tgz#ae467ffe5f95961c6d41ceefe858fc36eb53b38f"
   integrity sha1-rkZ//l+VlhxtQc7v6Fj8NutTs48=
+
+emoji-regex@^8.0.0:
+  version "8.0.0"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/emoji-regex/-/emoji-regex-8.0.0.tgz#e818fd69ce5ccfcb404594f842963bf53164cc37"
+  integrity sha1-6Bj9ac5cz8tARZT4QpY79TFkzDc=
 
 emojis-list@^3.0.0:
   version "3.0.0"
@@ -358,10 +541,55 @@ escape-string-regexp@^1.0.5:
   resolved "https://registry.npm.taobao.org/escape-string-regexp/download/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
   integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
 
+eslint-utils@^2.1.0:
+  version "2.1.0"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/eslint-utils/-/eslint-utils-2.1.0.tgz#d2de5e03424e707dc10c74068ddedae708741b27"
+  integrity sha1-0t5eA0JOcH3BDHQGjd7a5wh0Gyc=
+  dependencies:
+    eslint-visitor-keys "^1.1.0"
+
+eslint-visitor-keys@^1.1.0, eslint-visitor-keys@^1.3.0:
+  version "1.3.0"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/eslint-visitor-keys/-/eslint-visitor-keys-1.3.0.tgz#30ebd1ef7c2fdff01c3a4f151044af25fab0523e"
+  integrity sha1-MOvR73wv3/AcOk8VEESvJfqwUj4=
+
+eslint-visitor-keys@^2.0.0:
+  version "2.1.0"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/eslint-visitor-keys/-/eslint-visitor-keys-2.1.0.tgz#f65328259305927392c938ed44eb0a5c9b2bd303"
+  integrity sha1-9lMoJZMFknOSyTjtROsKXJsr0wM=
+
+"espree@^6.0.0 || ^7.2.0":
+  version "7.3.1"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/espree/-/espree-7.3.1.tgz#f2df330b752c6f55019f8bd89b7660039c1bbbb6"
+  integrity sha1-8t8zC3Usb1UBn4vYm3ZgA5wbu7Y=
+  dependencies:
+    acorn "^7.4.0"
+    acorn-jsx "^5.3.1"
+    eslint-visitor-keys "^1.3.0"
+
 estree-walker@^2.0.1:
   version "2.0.2"
   resolved "https://registry.npm.taobao.org/estree-walker/download/estree-walker-2.0.2.tgz?cache=0&sync_timestamp=1611956983677&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Festree-walker%2Fdownload%2Festree-walker-2.0.2.tgz#52f010178c2a4c117a7757cfe942adb7d2da4cac"
   integrity sha1-UvAQF4wqTBF6d1fP6UKtt9LaTKw=
+
+fast-glob@^3.2.5:
+  version "3.2.5"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/fast-glob/-/fast-glob-3.2.5.tgz#7939af2a656de79a4f1901903ee8adcaa7cb9661"
+  integrity sha1-eTmvKmVt55pPGQGQPuityqfLlmE=
+  dependencies:
+    "@nodelib/fs.stat" "^2.0.2"
+    "@nodelib/fs.walk" "^1.2.3"
+    glob-parent "^5.1.0"
+    merge2 "^1.3.0"
+    micromatch "^4.0.2"
+    picomatch "^2.2.1"
+
+fastq@^1.6.0:
+  version "1.11.0"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/fastq/-/fastq-1.11.0.tgz#bb9fb955a07130a918eb63c1f5161cc32a5d0858"
+  integrity sha1-u5+5VaBxMKkY62PB9RYcwypdCFg=
+  dependencies:
+    reusify "^1.0.4"
 
 filelist@^1.0.1:
   version "1.0.2"
@@ -397,6 +625,11 @@ fs-extra@^9.1.0:
     jsonfile "^6.0.1"
     universalify "^2.0.0"
 
+fs.realpath@^1.0.0:
+  version "1.0.0"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
+  integrity sha1-FQStJSMVjKpA20onh8sBQRmU6k8=
+
 fsevents@~2.3.1:
   version "2.3.2"
   resolved "https://registry.npm.taobao.org/fsevents/download/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
@@ -414,12 +647,29 @@ generic-names@^2.0.1:
   dependencies:
     loader-utils "^1.1.0"
 
-glob-parent@~5.1.0:
+get-caller-file@^2.0.5:
+  version "2.0.5"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/get-caller-file/-/get-caller-file-2.0.5.tgz#4f94412a82db32f36e3b0b9741f8a97feb031f7e"
+  integrity sha1-T5RBKoLbMvNuOwuXQfipf+sDH34=
+
+glob-parent@^5.1.0, glob-parent@~5.1.0:
   version "5.1.2"
   resolved "https://registry.npm.taobao.org/glob-parent/download/glob-parent-5.1.2.tgz?cache=0&sync_timestamp=1615065997979&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fglob-parent%2Fdownload%2Fglob-parent-5.1.2.tgz#869832c58034fe68a4093c17dc15e8340d8401c4"
   integrity sha1-hpgyxYA0/mikCTwX3BXoNA2EAcQ=
   dependencies:
     is-glob "^4.0.1"
+
+glob@^7.1.6:
+  version "7.1.7"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/glob/-/glob-7.1.7.tgz#3b193e9233f01d42d0b3f78294bbeeb418f94a90"
+  integrity sha1-Oxk+kjPwHULQs/eClLvutBj5SpA=
+  dependencies:
+    fs.realpath "^1.0.0"
+    inflight "^1.0.4"
+    inherits "2"
+    minimatch "^3.0.4"
+    once "^1.3.0"
+    path-is-absolute "^1.0.0"
 
 graceful-fs@^4.1.6, graceful-fs@^4.2.0:
   version "4.2.6"
@@ -430,6 +680,11 @@ has-flag@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npm.taobao.org/has-flag/download/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"
   integrity sha1-tdRU3CGZriJWmfNGfloH87lVuv0=
+
+has-flag@^4.0.0:
+  version "4.0.0"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/has-flag/-/has-flag-4.0.0.tgz#944771fd9c81c81265c4d6941860da06bb59479b"
+  integrity sha1-lEdx/ZyByBJlxNaUGGDaBrtZR5s=
 
 has@^1.0.3:
   version "1.0.3"
@@ -476,6 +731,19 @@ indexes-of@^1.0.1:
   resolved "https://registry.npm.taobao.org/indexes-of/download/indexes-of-1.0.1.tgz#f30f716c8e2bd346c7b67d3df3915566a7c05607"
   integrity sha1-8w9xbI4r00bHtn0985FVZqfAVgc=
 
+inflight@^1.0.4:
+  version "1.0.6"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/inflight/-/inflight-1.0.6.tgz#49bd6331d7d02d0c09bc910a1075ba8165b56df9"
+  integrity sha1-Sb1jMdfQLQwJvJEKEHW6gWW1bfk=
+  dependencies:
+    once "^1.3.0"
+    wrappy "1"
+
+inherits@2:
+  version "2.0.4"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/inherits/-/inherits-2.0.4.tgz#0fa2c64f932917c3433a0ded55363aae37416b7c"
+  integrity sha1-D6LGT5MpF8NDOg3tVTY6rjdBa3w=
+
 is-binary-path@~2.1.0:
   version "2.1.0"
   resolved "https://registry.npm.taobao.org/is-binary-path/download/is-binary-path-2.1.0.tgz#ea1f7f3b80f064236e83470f86c09c254fb45b09"
@@ -494,6 +762,11 @@ is-extglob@^2.1.1:
   version "2.1.1"
   resolved "https://registry.npm.taobao.org/is-extglob/download/is-extglob-2.1.1.tgz#a88c02535791f02ed37c76a1b9ea9773c833f8c2"
   integrity sha1-qIwCU1eR8C7TfHahueqXc8gz+MI=
+
+is-fullwidth-code-point@^3.0.0:
+  version "3.0.0"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz#f116f8064fe90b3f7844a38997c0b75051269f1d"
+  integrity sha1-8Rb4Bk/pCz94RKOJl8C3UFEmnx0=
 
 is-glob@^4.0.1, is-glob@~4.0.1:
   version "4.0.1"
@@ -524,6 +797,15 @@ json5@^1.0.1:
   dependencies:
     minimist "^1.2.0"
 
+jsonc-eslint-parser@^1.0.1:
+  version "1.0.1"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/jsonc-eslint-parser/-/jsonc-eslint-parser-1.0.1.tgz#fbbedad0875c79e1e15d0ed6877ebe43f18a52e3"
+  integrity sha1-+77a0IdceeHhXQ7Wh36+Q/GKUuM=
+  dependencies:
+    eslint-utils "^2.1.0"
+    eslint-visitor-keys "^2.0.0"
+    espree "^6.0.0 || ^7.2.0"
+
 jsonfile@^6.0.1:
   version "6.1.0"
   resolved "https://registry.npm.taobao.org/jsonfile/download/jsonfile-6.1.0.tgz?cache=0&sync_timestamp=1604161797011&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fjsonfile%2Fdownload%2Fjsonfile-6.1.0.tgz#bc55b2634793c679ec6403094eb13698a6ec0aae"
@@ -547,7 +829,7 @@ lodash.camelcase@^4.3.0:
   resolved "https://registry.npm.taobao.org/lodash.camelcase/download/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
   integrity sha1-soqmKIorn8ZRA1x3EfZathkDMaY=
 
-lodash@^4.17.19:
+lodash@^4.17.19, lodash@^4.17.20:
   version "4.17.21"
   resolved "https://registry.npm.taobao.org/lodash/download/lodash-4.17.21.tgz?cache=0&sync_timestamp=1613835838133&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flodash%2Fdownload%2Flodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha1-Z5WRxWTDv/quhFTPCz3zcMPWkRw=
@@ -580,6 +862,19 @@ merge-source-map@^1.1.0:
   dependencies:
     source-map "^0.6.1"
 
+merge2@^1.3.0:
+  version "1.4.1"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/merge2/-/merge2-1.4.1.tgz#4368892f885e907455a6fd7dc55c0c9d404990ae"
+  integrity sha1-Q2iJL4hekHRVpv19xVwMnUBJkK4=
+
+micromatch@^4.0.2:
+  version "4.0.4"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/micromatch/-/micromatch-4.0.4.tgz#896d519dfe9db25fce94ceb7a500919bf881ebf9"
+  integrity sha1-iW1Rnf6dsl/OlM63pQCRm/iB6/k=
+  dependencies:
+    braces "^3.0.1"
+    picomatch "^2.2.3"
+
 minimatch@^3.0.4:
   version "3.0.4"
   resolved "https://registry.npm.taobao.org/minimatch/download/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
@@ -591,6 +886,11 @@ minimist@^1.2.0:
   version "1.2.5"
   resolved "https://registry.npm.taobao.org/minimist/download/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
   integrity sha1-Z9ZgFLZqaoqqDAg8X9WN9OTpdgI=
+
+ms@2.1.2:
+  version "2.1.2"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
+  integrity sha1-0J0fNXtEP0kzgqjrPM0YOHKuYAk=
 
 nanoid@^3.1.22:
   version "3.1.22"
@@ -630,6 +930,13 @@ object-assign@>=4.0.1:
   resolved "https://registry.npm.taobao.org/object-assign/download/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
   integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
 
+once@^1.3.0:
+  version "1.4.0"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/once/-/once-1.4.0.tgz#583b1aa775961d4b113ac17d9c50baef9dd76bd1"
+  integrity sha1-WDsap3WWHUsROsF9nFC6753Xa9E=
+  dependencies:
+    wrappy "1"
+
 param-case@^3.0.3:
   version "3.0.4"
   resolved "https://registry.npm.taobao.org/param-case/download/param-case-3.0.4.tgz?cache=0&sync_timestamp=1606867292797&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fparam-case%2Fdownload%2Fparam-case-3.0.4.tgz#7d17fe4aa12bde34d4a77d91acfb6219caad01c5"
@@ -646,12 +953,17 @@ pascal-case@^3.1.2:
     no-case "^3.0.4"
     tslib "^2.0.3"
 
+path-is-absolute@^1.0.0:
+  version "1.0.1"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/path-is-absolute/-/path-is-absolute-1.0.1.tgz#174b9268735534ffbc7ace6bf53a5a9e1b5c5f5f"
+  integrity sha1-F0uSaHNVNP+8es5r9TpanhtcX18=
+
 path-parse@^1.0.6:
   version "1.0.6"
   resolved "https://registry.npm.taobao.org/path-parse/download/path-parse-1.0.6.tgz#d62dbb5679405d72c4737ec58600e9ddcf06d24c"
   integrity sha1-1i27VnlAXXLEc37FhgDp3c8G0kw=
 
-picomatch@^2.0.4, picomatch@^2.2.1:
+picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.2.2, picomatch@^2.2.3:
   version "2.2.3"
   resolved "https://registry.npm.taobao.org/picomatch/download/picomatch-2.2.3.tgz#465547f359ccc206d3c48e46a1bcb89bf7ee619d"
   integrity sha1-RlVH81nMwgbTxI5Goby4m/fuYZ0=
@@ -728,6 +1040,11 @@ postcss@^8.1.10, postcss@^8.2.1:
     nanoid "^3.1.22"
     source-map "^0.6.1"
 
+queue-microtask@^1.2.2:
+  version "1.2.3"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
+  integrity sha1-SSkii7xyTfrEPg77BYyve2z7YkM=
+
 readdirp@~3.5.0:
   version "3.5.0"
   resolved "https://registry.npm.taobao.org/readdirp/download/readdirp-3.5.0.tgz?cache=0&sync_timestamp=1615717369278&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freaddirp%2Fdownload%2Freaddirp-3.5.0.tgz#9ba74c019b15d365278d2e91bb8c48d7b4d42c9e"
@@ -745,6 +1062,11 @@ relateurl@^0.2.7:
   resolved "https://registry.npm.taobao.org/relateurl/download/relateurl-0.2.7.tgz#54dbf377e51440aca90a4cd274600d3ff2d888a9"
   integrity sha1-VNvzd+UUQKypCkzSdGANP/LYiKk=
 
+require-directory@^2.1.1:
+  version "2.1.1"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/require-directory/-/require-directory-2.1.1.tgz#8c64ad5fd30dab1c976e2344ffe7f792a6a6df42"
+  integrity sha1-jGStX9MNqxyXbiNE/+f3kqam30I=
+
 resolve@^1.19.0:
   version "1.20.0"
   resolved "https://registry.npm.taobao.org/resolve/download/resolve-1.20.0.tgz?cache=0&sync_timestamp=1613054822645&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fresolve%2Fdownload%2Fresolve-1.20.0.tgz#629a013fb3f70755d6f0b7935cc1c2c5378b1975"
@@ -753,12 +1075,24 @@ resolve@^1.19.0:
     is-core-module "^2.2.0"
     path-parse "^1.0.6"
 
+reusify@^1.0.4:
+  version "1.0.4"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/reusify/-/reusify-1.0.4.tgz#90da382b1e126efc02146e90845a88db12925d76"
+  integrity sha1-kNo4Kx4SbvwCFG6QhFqI2xKSXXY=
+
 rollup@^2.38.5:
   version "2.45.1"
   resolved "https://registry.npm.taobao.org/rollup/download/rollup-2.45.1.tgz?cache=0&sync_timestamp=1618031342579&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Frollup%2Fdownload%2Frollup-2.45.1.tgz#eae2b94dc2088b4e0a3b7197a5a1ee0bdd589d5c"
   integrity sha1-6uK5TcIIi04KO3GXpaHuC91YnVw=
   optionalDependencies:
     fsevents "~2.3.1"
+
+run-parallel@^1.1.9:
+  version "1.2.0"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/run-parallel/-/run-parallel-1.2.0.tgz#66d1368da7bdf921eb9d95bd1a9229e7f21a43ee"
+  integrity sha1-ZtE2jae9+SHrnZW9GpIp5/IaQ+4=
+  dependencies:
+    queue-microtask "^1.2.2"
 
 sass@^1.32.0:
   version "1.32.8"
@@ -780,7 +1114,7 @@ source-map-support@~0.5.12:
     buffer-from "^1.0.0"
     source-map "^0.6.0"
 
-source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.0, source-map@~0.6.1:
+source-map@0.6.1, source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.0, source-map@~0.6.1:
   version "0.6.1"
   resolved "https://registry.npm.taobao.org/source-map/download/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha1-dHIq8y6WFOnCh6jQu95IteLxomM=
@@ -795,12 +1129,35 @@ string-hash@^1.1.1:
   resolved "https://registry.npm.taobao.org/string-hash/download/string-hash-1.1.3.tgz#e8aafc0ac1855b4666929ed7dd1275df5d6c811b"
   integrity sha1-6Kr8CsGFW0Zmkp7X3RJ1311sgRs=
 
+string-width@^4.1.0, string-width@^4.2.0:
+  version "4.2.2"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/string-width/-/string-width-4.2.2.tgz#dafd4f9559a7585cfba529c6a0a4f73488ebd4c5"
+  integrity sha1-2v1PlVmnWFz7pSnGoKT3NIjr1MU=
+  dependencies:
+    emoji-regex "^8.0.0"
+    is-fullwidth-code-point "^3.0.0"
+    strip-ansi "^6.0.0"
+
+strip-ansi@^6.0.0:
+  version "6.0.0"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/strip-ansi/-/strip-ansi-6.0.0.tgz#0b1571dd7669ccd4f3e06e14ef1eed26225ae532"
+  integrity sha1-CxVx3XZpzNTz4G4U7x7tJiJa5TI=
+  dependencies:
+    ansi-regex "^5.0.0"
+
 supports-color@^5.3.0:
   version "5.5.0"
   resolved "https://registry.npm.taobao.org/supports-color/download/supports-color-5.5.0.tgz?cache=0&sync_timestamp=1611393963969&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fsupports-color%2Fdownload%2Fsupports-color-5.5.0.tgz#e2e69a44ac8772f78a1ec0b35b689df6530efc8f"
   integrity sha1-4uaaRKyHcveKHsCzW2id9lMO/I8=
   dependencies:
     has-flag "^3.0.0"
+
+supports-color@^7.1.0:
+  version "7.2.0"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/supports-color/-/supports-color-7.2.0.tgz#1b7dcdcb32b8138801b3e478ba6a51caa89648da"
+  integrity sha1-G33NyzK4E4gBs+R4umpRyqiWSNo=
+  dependencies:
+    has-flag "^4.0.0"
 
 systemjs@^6.8.3:
   version "6.8.3"
@@ -857,6 +1214,11 @@ vite-plugin-html@^2.0.3:
     fs-extra "^9.1.0"
     html-minifier-terser "^5.1.1"
 
+vite-plugin-i18n-resources@^1.0.3:
+  version "1.0.3"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/vite-plugin-i18n-resources/-/vite-plugin-i18n-resources-1.0.3.tgz#6a9a4204bd9676ff6c0ff08853a2ba45c22036e8"
+  integrity sha1-appCBL2Wdv9sD/CIU6K6RcIgNug=
+
 vite@^2.1.0:
   version "2.1.5"
   resolved "https://registry.npm.taobao.org/vite/download/vite-2.1.5.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvite%2Fdownload%2Fvite-2.1.5.tgz#4857da441c62f7982c83cbd5f42a00330f20c9c1"
@@ -868,6 +1230,16 @@ vite@^2.1.0:
     rollup "^2.38.5"
   optionalDependencies:
     fsevents "~2.3.1"
+
+vue-i18n@^9.1.6:
+  version "9.1.6"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/vue-i18n/-/vue-i18n-9.1.6.tgz#4cf992e2aec5458bc19369973c96ea7d0f560321"
+  integrity sha1-TPmS4q7FRYvBk2mXPJbqfQ9WAyE=
+  dependencies:
+    "@intlify/core-base" "9.1.6"
+    "@intlify/shared" "9.1.6"
+    "@intlify/vue-devtools" "9.1.6"
+    "@vue/devtools-api" "^6.0.0-beta.7"
 
 vue-router@^4.0.5:
   version "4.0.6"
@@ -883,7 +1255,58 @@ vue@^3.0.7:
     "@vue/runtime-dom" "3.0.11"
     "@vue/shared" "3.0.11"
 
+wrap-ansi@^7.0.0:
+  version "7.0.0"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
+  integrity sha1-Z+FFz/UQpqaYS98RUpEdadLrnkM=
+  dependencies:
+    ansi-styles "^4.0.0"
+    string-width "^4.1.0"
+    strip-ansi "^6.0.0"
+
+wrappy@1:
+  version "1.0.2"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
+  integrity sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
+
+y18n@^5.0.5:
+  version "5.0.8"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/y18n/-/y18n-5.0.8.tgz#7f4934d0f7ca8c56f95314939ddcd2dd91ce1d55"
+  integrity sha1-f0k00PfKjFb5UxSTndzS3ZHOHVU=
+
 yallist@^3.0.2:
   version "3.1.1"
   resolved "https://registry.npm.taobao.org/yallist/download/yallist-3.1.1.tgz#dbb7daf9bfd8bac9ab45ebf602b8cbad0d5d08fd"
   integrity sha1-27fa+b/YusmrRev2ArjLrQ1dCP0=
+
+yaml-eslint-parser@^0.3.2:
+  version "0.3.2"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/yaml-eslint-parser/-/yaml-eslint-parser-0.3.2.tgz#c7f5f3904f1c06ad55dc7131a731b018426b4898"
+  integrity sha1-x/XzkE8cBq1V3HExpzGwGEJrSJg=
+  dependencies:
+    eslint-visitor-keys "^1.3.0"
+    lodash "^4.17.20"
+    yaml "^1.10.0"
+
+yaml@^1.10.0:
+  version "1.10.2"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/yaml/-/yaml-1.10.2.tgz#2301c5ffbf12b467de8da2333a459e29e7920e4b"
+  integrity sha1-IwHF/78StGfejaIzOkWeKeeSDks=
+
+yargs-parser@^20.2.2:
+  version "20.2.7"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/yargs-parser/-/yargs-parser-20.2.7.tgz#61df85c113edfb5a7a4e36eb8aa60ef423cbc90a"
+  integrity sha1-Yd+FwRPt+1p6TjbriqYO9CPLyQo=
+
+yargs@^16.2.0:
+  version "16.2.0"
+  resolved "https://repo.essence.com.cn:443/artifactory/api/npm/npm/yargs/-/yargs-16.2.0.tgz#1c82bf0f6b6a66eafce7ef30e376f49a12477f66"
+  integrity sha1-HIK/D2tqZur85+8w43b0mhJHf2Y=
+  dependencies:
+    cliui "^7.0.2"
+    escalade "^3.1.1"
+    get-caller-file "^2.0.5"
+    require-directory "^2.1.1"
+    string-width "^4.2.0"
+    y18n "^5.0.5"
+    yargs-parser "^20.2.2"
