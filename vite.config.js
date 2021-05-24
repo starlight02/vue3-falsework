@@ -25,7 +25,7 @@ export default defineConfig({
         vueI18n(),
         // 此插件只能收集文件名为 {namespaces}.{locale}.json 的 JSON 文件
         i18nResources({
-          path: resolve(__dirname, "src/modules"),
+            path: resolve(__dirname, "src/modules"),
         }),
         htmlPlugin(
             {

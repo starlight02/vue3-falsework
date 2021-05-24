@@ -1,12 +1,13 @@
+import router from './plugins/router';
+import i18n from './plugins/i18n';
+import api from './plugins/api';
+import np from 'nprogress';
 import { createApp } from 'vue';
 import App from './App.vue';
-import router from './plugins/router';
-import api from './plugins/api';
-import i18n from './plugins/i18n';
-import np from 'nprogress';
 import 'nprogress/nprogress.css';
 import './styles/reset.css';
 import smoothscroll from 'smoothscroll-polyfill';
+import { formatI18nRoute } from './utils'
 
 smoothscroll.polyfill();
 
@@ -17,4 +18,5 @@ window.np = np;
 export const app = createApp(App)
     .use(router)
     .use(i18n)
+    .provide('formatI18nRoute', formatI18nRoute)
     .mount('#app');

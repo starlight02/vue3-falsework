@@ -5,5 +5,10 @@ export default [
         name: 'Home',
         path: '/',
         component: Home,
+    },
+    {
+        name: 'I18nHome',
+        path: '/:lang',
+        component: Home,
     }
 ];

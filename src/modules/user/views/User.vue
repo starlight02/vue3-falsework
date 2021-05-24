@@ -4,23 +4,22 @@
 </template>
 
 <script setup>
-import {useRoute, useRouter} from 'vue-router';
+import { inject } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 
 const route = useRoute();
 const router = useRouter();
-
-console.log('这是：', route.name);
+const formatI18nRoute = inject('formatI18nRoute');
 
 const goHome = () => {
-    router.push({name: 'Home'});
+    router.push(formatI18nRoute({name: 'Home'}));
 };
 
 // 如果要使用 i18n 块里的配置，要设置 inheritLocale 属性为 true 且不能使用全局 $t 函数
 const { locale, messages, t } = useI18n({
     inheritLocale: true
 });
-console.log(messages.value);
 
 </script>
 
@@ -30,7 +29,7 @@ console.log(messages.value);
     "language": "Language",
     "title": "hello, world!"
   },
-  "hans": {
+  "zh-Hans": {
     "language": "言語",
     "title": "哇哇哇，上大分了"
   }
