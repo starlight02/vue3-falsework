@@ -8,9 +8,9 @@ export const axios = Axios.create({
     // withCredentials: true,
     headers: {
         'Accept': 'application/json',
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
     },
-    validateStatus: status => ((status >= 200 && status < 300) || status === 304)
+    validateStatus: status => ((status >= 200 && status < 300) || status === 304),
 });
 
 //全局请求拦截器
@@ -39,18 +39,18 @@ const modules = import.meta.globEager('../modules/*/apis.js');
 // console.log(modules);
 
 Object.keys(modules).forEach(key => {
-    const { default: api } = modules[key];
-    apisConfig = { ...apisConfig, ...api };
+    const {default: api} = modules[key];
+    apisConfig = {...apisConfig, ...api};
 });
 // console.log(apisConfig);
 
 Object.keys(apisConfig).forEach(key => {
     const config = apisConfig[key];
-
+    
     function request(restful, params) {
         config.method = config.method?.toLowerCase() || 'get';
-        let parameter = {};
-        let query = {};
+        let parameter;
+        let query;
         if (config.restful) {
             config.transform ? config.url = config.original : config.original = config.url;
             const match = config.url.match(/{[^{}]+}/g);
@@ -77,16 +77,16 @@ Object.keys(apisConfig).forEach(key => {
             parameter = restful;
             query = arguments[1];
         }
-
+        
         if (config.method === 'get' || config.method === 'delete') {
-            config.params = { ...parameter, ...query };
+            config.params = {...parameter, ...query};
         } else if (config.method === 'post' || config.method === 'put' || config.method === 'patch') {
             config.data = parameter;
             config.params = query;
         }
         return axios.request(config);
     }
-
+    
     apis[key] = request;
 });
 

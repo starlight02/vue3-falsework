@@ -7,14 +7,14 @@ const routes = [];
 const modules = import.meta.globEager('../modules/*/routes.js');
 
 Object.keys(modules).forEach(r => {
-    const { default: list } = modules[r];
+    const {default: list} = modules[r];
     routes.push(...list);
 });
-routes.push({ path: '/:pathMatch(.*)*', redirect: { name: 'Home' }});
+routes.push({path: '/:pathMatch(.*)*', redirect: {name: 'Home'}});
 
 const router = createRouter({
     history: routerHistory,
-    routes
+    routes,
 });
 
 router.beforeEach((to, from) => {
@@ -23,11 +23,11 @@ router.beforeEach((to, from) => {
     window.localStorage.setItem(import.meta.env.VITE_SPECIFIED_LANG, lang);
     // 当从一种语言前缀切换到另一种时
     if (from.params.lang !== to.params.lang) {
-      console.log('已更改指定语言：', lang);
-      // 如果指定的语言不支持则重定向到默认语言
-      if(!i18nLocaleChange(lang)) {
-        return { redirect: { name: to.name.replace('I18n','') }};
-      }
+        console.log('已更改指定语言：', lang);
+        // 如果指定的语言不支持则重定向到默认语言
+        if (!i18nLocaleChange(lang)) {
+            return {redirect: {name: to.name.replace('I18n', '')}};
+        }
     }
     return true;
 });
