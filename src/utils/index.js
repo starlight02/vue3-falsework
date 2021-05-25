@@ -8,11 +8,12 @@ export function i18nLocaleChange(lang) {
       i18n.global.locale.value = map.locale;
       window.document.documentElement.setAttribute('lang', map.lang);
       window.document.documentElement.className = map.lang;
-      return;
+      return true;
   }
+  return false;
 }
 
 export function formatI18nRoute(route) {
-  const lang = window.localStorage.getItem(import.meta.env.VITE_SPECIFIED_LANG).toLowerCase();
+  const lang = window.localStorage.getItem(import.meta.env.VITE_SPECIFIED_LANG);
   return {...route, name: lang? `I18n${route.name}` : route.name, params: { lang }};
 }

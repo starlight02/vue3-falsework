@@ -24,7 +24,10 @@ router.beforeEach((to, from) => {
     // 当从一种语言前缀切换到另一种时
     if (from.params.lang !== to.params.lang) {
       console.log('已更改指定语言：', lang);
-      i18nLocaleChange(lang);
+      // 如果指定的语言不支持则重定向到默认语言
+      if(!i18nLocaleChange(lang)) {
+        return { redirect: { name: to.name.replace('I18n','') }};
+      }
     }
     return true;
 });
