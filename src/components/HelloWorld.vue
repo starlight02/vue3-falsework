@@ -9,9 +9,7 @@
 </template>
 
 <script setup>
-// 使用 script setup 无法使用 toRefs 去全部解构 reactive 包装的值
-// 得使用 state.b 或 toRef 单独解构
-import { defineProps, onMounted, reactive, ref, toRef, toRefs } from "vue";
+import { onMounted, reactive, toRef, toRefs } from "vue";
 
 defineProps({
     msg: {
@@ -20,24 +18,28 @@ defineProps({
     },
 });
 
-const count = ref(10);
+let count = $ref(10);
 const state = reactive({
     a: 1,
     b: 2,
 });
-const b = toRef(state, "b");
-const a = toRef(state, "a");
+
+// 使用 state.b 或 toRef 单独解构 reactive 包装的值
+// 使用了 $()，不需要使用 b.value
+// let b = $(toRef(state, 'b'));
+// let a = $(toRef(state, 'a'));
+
+const {a, b} = $(toRefs(state));
 
 function updateState() {
-    b.value += 2;
+    b += 2;
     state.a++;
 }
 
 onMounted(() => {
     console.log(state);
-    console.log(state.b);
-    console.log(b.value);
-    console.log(count.value);
+    console.log(a);
+    console.log(b);
     console.log(count);
 });
 </script>

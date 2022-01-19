@@ -15,7 +15,9 @@ export default defineConfig({
     },
     // mode:,
     plugins: [
-        vue(),
+        vue({
+          refTransform: true
+        }),
         legacy({
             polyfills: [
                 // Empty by default

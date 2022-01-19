@@ -1,8 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import { i18nLocaleChange } from '../utils'
 
-const routerHistory = createWebHistory();
-
 const routes = [];
 const modules = import.meta.globEager('../modules/*/routes.js');
 
@@ -13,7 +11,7 @@ Object.keys(modules).forEach(r => {
 routes.push({path: '/:pathMatch(.*)*', redirect: {name: 'Home'}});
 
 const router = createRouter({
-    history: routerHistory,
+    history: createWebHistory(),
     routes,
 });
 

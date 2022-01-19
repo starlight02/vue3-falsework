@@ -15,8 +15,9 @@ window.appVersion = import.meta.env.VITE_APP_VERSION;
 window.api = api;
 window.np = np;
 
-export const app = createApp(App)
-    .use(router)
-    .use(i18n)
-    .provide('formatI18nRoute', formatI18nRoute)
-    .mount('#app');
+const app = createApp(App)
+  .use(router)
+  .use(i18n)
+  .provide('formatI18nRoute', formatI18nRoute);
+    
+router.isReady().then(() => app.mount('#app'));
