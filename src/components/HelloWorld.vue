@@ -29,7 +29,7 @@ const state = reactive({
 // let b = $(toRef(state, 'b'));
 // let a = $(toRef(state, 'a'));
 
-const {a, b} = $(toRefs(state));
+let {a, b} = $(toRefs(state));
 
 function updateState() {
     b += 2;
