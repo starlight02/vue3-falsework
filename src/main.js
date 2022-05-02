@@ -10,7 +10,7 @@ import {formatI18nRoute} from './utils';
 
 smoothscroll.polyfill();
 
-window.appVersion = import.meta.env.VITE_APP_VERSION;
+window.APP_VERSION = import.meta.env.VITE_APP_VERSION;
 window.api = api;
 window.np = np;
 

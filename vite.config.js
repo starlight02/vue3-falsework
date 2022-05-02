@@ -1,10 +1,10 @@
 require('./script/get_code_version');
 
-import {resolve} from 'path';
-import {defineConfig} from 'vite';
+import { resolve } from 'path';
+import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import legacy from '@vitejs/plugin-legacy';
-import htmlPlugin from 'vite-plugin-html';
+import { createHtmlPlugin } from 'vite-plugin-html';
 import vueI18n from '@intlify/vite-plugin-vue-i18n';
 import i18nResources from 'vite-plugin-i18n-resources';
 
@@ -16,45 +16,44 @@ export default defineConfig({
     // mode:,
     plugins: [
         vue({
-          refTransform: true
+            reactivityTransform: true
         }),
         legacy({
             polyfills: [
-                // Empty by default
+                '> 0.2%', 'last 2 versions', 'not dead',
             ],
-            corejs: true,
+            additionalLegacyPolyfills: ['regenerator-runtime/runtime']
         }),
         vueI18n(),
         // 此插件只能收集文件名为 {namespaces}.{locale}.json 的 JSON 文件
         i18nResources({
             path: resolve(__dirname, 'src/modules'),
         }),
-        htmlPlugin(
-            {
-                inject: {
-                    injectData: {
-                        TITLE: 'Vue3 APP',
-                    },
-                    // tags 里的配置会插入到 head 中
-                    tags: [
-                        {
-                            tag: 'meta',
-                            attrs: {
-                                name: 'keywords',
-                                content: '关键字,关键字',
-                            },
-                        },
-                        {
-                            tag: 'meta',
-                            attrs: {
-                                name: 'description',
-                                content: '这是网站描述描述描述描述',
-                            },
-                        },
-                    ],
+        createHtmlPlugin({
+            minify: true,
+            entry: 'src/main.js',
+            inject: {
+                data: {
+                    TITLE: 'Vue3 APP',
                 },
-                minify: true,
+                // tags 里的配置会插入到 head 中
+                tags: [
+                    {
+                        tag: 'meta',
+                        attrs: {
+                            name: 'keywords',
+                            content: '关键字,关键字',
+                        },
+                    },
+                    {
+                        tag: 'meta',
+                        attrs: {
+                            name: 'description',
+                            content: '这是网站描述描述描述描述',
+                        },
+                    },
+                ],
             },
-        ),
+        }),
     ],
 });

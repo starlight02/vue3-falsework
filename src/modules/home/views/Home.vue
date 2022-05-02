@@ -4,7 +4,7 @@
     <router-link :to="{name: 'Home'}">默认语言首页</router-link>
     <div>
       <select v-model="$i18n.locale">
-        <option value="hans">简体中文</option>
+        <option value="zh-Hans">简体中文</option>
         <option value="en">英文</option>
       </select>
     </div>

@@ -1,5 +1,5 @@
 'use strict'
-const path = require('path')
+const path = require('path');
 
 module.exports = {
     context: path.resolve(__dirname, './'),
@@ -15,4 +15,4 @@ module.exports = {
             // '@utils': path.resolve(__dirname, 'src/utils')
         }
     }
-}
+};

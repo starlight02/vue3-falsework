@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import { i18nLocaleChange } from '../utils'
+import { i18nLocaleChange } from '../utils';
 
 const routes = [];
 const modules = import.meta.globEager('../modules/*/routes.js');
