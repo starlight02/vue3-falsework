@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import { i18nLocaleChange } from '../utils';
 
 const routes = [];
-const modules = import.meta.globEager('../modules/*/routes.js');
+const modules = import.meta.glob('../modules/*/routes.js', { eager: true });
 
 Object.keys(modules).forEach(r => {
     const {default: list} = modules[r];
