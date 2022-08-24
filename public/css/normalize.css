@@ -22,6 +22,7 @@ html {
 
 body {
   margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Noto Sans SC", Roboto, "Fira Sans", "Liberation Sans", "Droid Sans", Ubuntu, "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 /**
@@ -162,7 +163,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; /* 1 */
+  font-family: "PingFang SC", "Source Han Sans", "Noto Sans SC", "Microsoft Yahei", "Hiragino Sans", sans-serif, Arial; /* 1 */
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
